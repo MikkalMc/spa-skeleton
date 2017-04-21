@@ -27,5 +27,5 @@ Run `npm run build` to execute webpack script.
 - webpack
 
 Also requires:
-- Wordpress REST API Menus plugin
+- [Wordpress REST API Menus plugin](https://en-gb.wordpress.org/plugins/wp-api-menus/)
 
