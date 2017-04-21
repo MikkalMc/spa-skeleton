@@ -37,18 +37,18 @@ export default {
         'search-result': require('./SearchResult.vue')
     },
 
-	data () {
-		return {
+    data () {
+        return {
             search: search,
             inputs: {
-                term: '',
-                type: 'Posts',
+            term: '',
+            type: 'Posts',
             },
             searchIsVisible: false,
             results: false,
             isMakingRequest: false,
-		}
-	},
+        }
+    },
 
     computed: {
         returnedSearchResults () {
@@ -56,7 +56,7 @@ export default {
         }
     },
 
-	methods: {
+    methods: {
         /*
         Toggle the visibility of the search input field
         and search result listings.

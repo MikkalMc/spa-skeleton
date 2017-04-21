@@ -11,19 +11,19 @@ This component listens for specific event emissions
 in order to show & hide the global loading dialog.
 */
 export default {
-	data () {
-		return {
-			isLoading: false
-		}
-	},
+    data () {
+        return {
+            isLoading: false
+        }
+    },
 
-	mounted () {
+    mounted () {
         this.EventHolder.$on('startLoading', () => {
             this.isLoading = true
         });
 
         this.EventHolder.$on('stopLoading', () => {
-        	this.isLoading = false
+            this.isLoading = false
         });
     }
 }
