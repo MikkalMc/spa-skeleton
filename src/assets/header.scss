@@ -1,0 +1,15 @@
+header {
+	background: #5d7a8a;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 30px;
+
+	a {
+		color: white;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
