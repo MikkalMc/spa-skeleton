@@ -13635,7 +13635,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Home.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Home.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13659,8 +13659,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c6ccab1a&file=Home.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Home.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c6ccab1a&file=Home.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Home.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6981418c&file=Home.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Home.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6981418c&file=Home.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Home.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14031,7 +14031,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Blog.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Blog.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14055,8 +14055,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-dbb46894&file=Blog.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Blog.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-dbb46894&file=Blog.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Blog.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e68ff06&file=Blog.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Blog.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e68ff06&file=Blog.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Blog.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14096,6 +14096,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
+	    components: {
+	        'post-excerpt': __webpack_require__(18)
+	    },
+
 	    data: function data() {
 	        return {
 	            api: _posts2.default,
@@ -14108,20 +14112,16 @@
 	    },
 
 
-	    components: {
-	        'post-excerpt': __webpack_require__(18)
+	    computed: {
+	        fetchedPosts: function fetchedPosts() {
+	            return this.posts;
+	        }
 	    },
 
 	    mounted: function mounted() {
 	        this.fetchPosts();
 	    },
 
-
-	    computed: {
-	        fetchedPosts: function fetchedPosts() {
-	            return this.posts;
-	        }
-	    },
 
 	    methods: {
 	        /*
@@ -14204,7 +14204,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/PostExcerpt.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/PostExcerpt.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14228,8 +14228,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1e03e646&file=PostExcerpt.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./PostExcerpt.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1e03e646&file=PostExcerpt.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./PostExcerpt.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-024fba36&file=PostExcerpt.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./PostExcerpt.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-024fba36&file=PostExcerpt.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./PostExcerpt.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14343,7 +14343,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Post.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Post.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14367,8 +14367,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3298f498&file=Post.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Post.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3298f498&file=Post.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Post.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-15593a7b&file=Post.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Post.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-15593a7b&file=Post.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Post.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14424,6 +14424,8 @@
 	// <script>
 
 	exports.default = {
+	    mixins: [_TimeHelper2.default],
+
 	    data: function data() {
 	        return {
 	            api: _posts2.default,
@@ -14432,18 +14434,16 @@
 	    },
 
 
-	    mixins: [_TimeHelper2.default],
-
-	    mounted: function mounted() {
-	        this.fetchPost();
-	    },
-
-
 	    computed: {
 	        fetchedPost: function fetchedPost() {
 	            return this.post[0];
 	        }
 	    },
+
+	    mounted: function mounted() {
+	        this.fetchPost();
+	    },
+
 
 	    methods: {
 	        /*
@@ -14501,7 +14501,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Page.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Page.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14525,8 +14525,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26627fba&file=Page.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Page.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26627fba&file=Page.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Page.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b7474ea&file=Page.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Page.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b7474ea&file=Page.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Page.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14572,9 +14572,6 @@
 	            page: false
 	        };
 	    },
-	    mounted: function mounted() {
-	        this.fetchPage();
-	    },
 
 
 	    computed: {
@@ -14582,6 +14579,11 @@
 	            return this.page[0];
 	        }
 	    },
+
+	    mounted: function mounted() {
+	        this.fetchPage();
+	    },
+
 
 	    methods: {
 	        /*
@@ -14665,7 +14667,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Loader.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Loader.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14689,8 +14691,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0fe706b2&file=Loader.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Loader.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0fe706b2&file=Loader.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Loader.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14181bae&file=Loader.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Loader.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14181bae&file=Loader.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Loader.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14787,7 +14789,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Navigation.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Navigation.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14811,8 +14813,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-21075fb0&file=Navigation.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Navigation.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-21075fb0&file=Navigation.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Navigation.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-61f9d8a2&file=Navigation.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Navigation.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-61f9d8a2&file=Navigation.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Navigation.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14994,7 +14996,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Pagination.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Pagination.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15018,8 +15020,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-245d6aa4&file=Pagination.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Pagination.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-245d6aa4&file=Pagination.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Pagination.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-654fe396&file=Pagination.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Pagination.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-654fe396&file=Pagination.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Pagination.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15062,7 +15064,6 @@
 	// <script>
 
 	exports.default = {
-
 	    props: ['pageCount', 'route'],
 
 	    computed: {
@@ -15106,7 +15107,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/Search.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/Search.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15130,8 +15131,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-87fa4088&file=Search.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Search.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-87fa4088&file=Search.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Search.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4fe3027a&file=Search.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Search.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4fe3027a&file=Search.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Search.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15171,6 +15172,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
+	    components: {
+	        'search-result': __webpack_require__(57)
+	    },
+
 	    data: function data() {
 	        return {
 	            search: _search2.default,
@@ -15184,10 +15189,6 @@
 	        };
 	    },
 
-
-	    components: {
-	        'search-result': __webpack_require__(57)
-	    },
 
 	    computed: {
 	        returnedSearchResults: function returnedSearchResults() {
@@ -15296,7 +15297,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/wpspa/src/components/SearchResult.vue"
+	  var id = "/home/scott/Desktop/websites/wordpress/wp-content/themes/spa-skeleton/src/components/SearchResult.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15320,8 +15321,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5861c279&file=SearchResult.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SearchResult.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5861c279&file=SearchResult.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SearchResult.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7145c040&file=SearchResult.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SearchResult.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7145c040&file=SearchResult.vue!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SearchResult.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
