@@ -14284,7 +14284,7 @@
 	//         <h2>{{ post.title.rendered }}</h2>
 	// 		<p>{{ this.fromNow(post.date) }}</p>
 	// 		<div v-html="post.excerpt.rendered"></div>
-	//         <router-link :to="{ name: 'post', params: { slug: post.slug } }">View Post</router-link>
+	// 		<router-link :to="{ name: 'post', params: { slug: post.slug } }">View Post</router-link>
 	//     </div>
 	// </template>
 	//
@@ -14320,7 +14320,7 @@
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div>\n        <h2>{{ post.title.rendered }}</h2>\n\t\t<p>{{ this.fromNow(post.date) }}</p>\n\t\t<div v-html=\"post.excerpt.rendered\"></div>\n        <router-link :to=\"{ name: 'post', params: { slug: post.slug } }\">View Post</router-link>\n    </div>\n";
+	module.exports = "\n    <div>\n        <h2>{{ post.title.rendered }}</h2>\n\t\t<p>{{ this.fromNow(post.date) }}</p>\n\t\t<div v-html=\"post.excerpt.rendered\"></div>\n\t\t<router-link :to=\"{ name: 'post', params: { slug: post.slug } }\">View Post</router-link>\n    </div>\n";
 
 /***/ },
 /* 24 */
@@ -14722,7 +14722,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	// <template>
 	//     <div v-if="isLoading" class="loader">
@@ -14737,22 +14737,22 @@
 	in order to show & hide the global loading dialog.
 	*/
 	exports.default = {
-	  data: function data() {
-	    return {
-	      isLoading: false
-	    };
-	  },
-	  mounted: function mounted() {
-	    var _this = this;
+	    data: function data() {
+	        return {
+	            isLoading: false
+	        };
+	    },
+	    mounted: function mounted() {
+	        var _this = this;
 
-	    this.EventHolder.$on('startLoading', function () {
-	      _this.isLoading = true;
-	    });
+	        this.EventHolder.$on('startLoading', function () {
+	            _this.isLoading = true;
+	        });
 
-	    this.EventHolder.$on('stopLoading', function () {
-	      _this.isLoading = false;
-	    });
-	  }
+	        this.EventHolder.$on('stopLoading', function () {
+	            _this.isLoading = false;
+	        });
+	    }
 	};
 
 	// </script>
@@ -15150,7 +15150,7 @@
 
 
 	// module
-	exports.push([module.id, "\n", ""]);
+	exports.push([module.id, "\n.search-toggle {\n    float: right;\n    text-transform: uppercase;\n    font-size: 10px;\n    font-weight: bold;\n    padding: 6px 10px;\n    background: #d8d8d8;\n    cursor: pointer;\n}\n\n.search-interface {\n    padding-right: 100px;\n}\n\n.search-interface input {\n    width: calc(100% - 100px);\n}\n", ""]);
 
 	// exports
 
@@ -15232,12 +15232,36 @@
 	// </script>
 	//
 	// <style>
+	// .search-toggle {
+	//     float: right;
+	//     text-transform: uppercase;
+	//     font-size: 10px;
+	//     font-weight: bold;
+	//     padding: 6px 10px;
+	//     background: #d8d8d8;
+	//     cursor: pointer;
+	// }
+	//
+	// .search-interface {
+	//     padding-right: 100px;
+	// }
+	//
+	// .search-interface input {
+	//     width: calc(100% - 100px);
+	// }
 	// </style>
 	// <template>
 	//     <div class="container">
-	//         <div @click="toggleSearch">Show search</div>
+	//         <div @click="toggleSearch" class="search-toggle">
+	//             <span v-if="searchIsVisible">
+	//                 Hide search
+	//             </span>
+	//             <span v-else>
+	//                 Show search
+	//             </span>
+	//         </div>
 	//
-	//         <div v-if="searchIsVisible">
+	//         <div v-if="searchIsVisible" class="search-interface">
 	//             <input type="text" v-model="inputs.term" @keyup.enter="performSearch" placeholder="Enter search term">
 	//             <select v-model="inputs.type">
 	//                 <option>Posts</option>
@@ -15402,7 +15426,7 @@
 /* 62 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div class=\"container\">\n        <div @click=\"toggleSearch\">Show search</div>\n\n        <div v-if=\"searchIsVisible\">\n            <input type=\"text\" v-model=\"inputs.term\" @keyup.enter=\"performSearch\" placeholder=\"Enter search term\">\n            <select v-model=\"inputs.type\">\n                <option>Posts</option>\n                <option>Pages</option>\n            </select>\n\n            <div v-if=\"returnedSearchResults\">\n                <div v-if=\"returnedSearchResults.length === 0\">\n                    No results found\n                </div>\n\n                <div v-else>\n                    <ul>\n                        <li v-for=\"result in returnedSearchResults\">\n                            <search-result :result=\"result\" :type=\"inputs.type\"></search-result>\n                        </li>\n                    </ul>\n\n                    <p v-if=\"returnedSearchResults.length > 10\">See all results</p>\n                </div>\n            </div>\n        </div>\n    </div>\n";
+	module.exports = "\n    <div class=\"container\">\n        <div @click=\"toggleSearch\" class=\"search-toggle\">\n            <span v-if=\"searchIsVisible\">\n                Hide search\n            </span>\n            <span v-else>\n                Show search\n            </span>\n        </div>\n\n        <div v-if=\"searchIsVisible\" class=\"search-interface\">\n            <input type=\"text\" v-model=\"inputs.term\" @keyup.enter=\"performSearch\" placeholder=\"Enter search term\">\n            <select v-model=\"inputs.type\">\n                <option>Posts</option>\n                <option>Pages</option>\n            </select>\n\n            <div v-if=\"returnedSearchResults\">\n                <div v-if=\"returnedSearchResults.length === 0\">\n                    No results found\n                </div>\n\n                <div v-else>\n                    <ul>\n                        <li v-for=\"result in returnedSearchResults\">\n                            <search-result :result=\"result\" :type=\"inputs.type\"></search-result>\n                        </li>\n                    </ul>\n\n                    <p v-if=\"returnedSearchResults.length > 10\">See all results</p>\n                </div>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
 /* 63 */

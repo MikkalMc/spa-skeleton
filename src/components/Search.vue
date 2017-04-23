@@ -1,8 +1,15 @@
 <template>
     <div class="container">
-        <div @click="toggleSearch">Show search</div>
+        <div @click="toggleSearch" class="search-toggle">
+            <span v-if="searchIsVisible">
+                Hide search
+            </span>
+            <span v-else>
+                Show search
+            </span>
+        </div>
 
-        <div v-if="searchIsVisible">
+        <div v-if="searchIsVisible" class="search-interface">
             <input type="text" v-model="inputs.term" @keyup.enter="performSearch" placeholder="Enter search term">
             <select v-model="inputs.type">
                 <option>Posts</option>
@@ -90,4 +97,21 @@ export default {
 </script>
 
 <style>
+.search-toggle {
+    float: right;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 10px;
+    background: #d8d8d8;
+    cursor: pointer;
+}
+
+.search-interface {
+    padding-right: 100px;
+}
+
+.search-interface input {
+    width: calc(100% - 100px);
+}
 </style>
