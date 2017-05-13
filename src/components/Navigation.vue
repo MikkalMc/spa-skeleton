@@ -5,7 +5,7 @@
                 <li>
                     <router-link :to="{ name: 'home' }" exact>Home</router-link>
                 </li>
-                <li v-bind:class="{ 'router-link-active': hasChildOfType('post') }">
+                <li v-bind:class="{ 'router-link-active': hasChildOfType(['blog', 'post']) }">
                     <router-link :to="{ name: 'blog', params: { page: 1 } }">Blog</router-link>
                 </li>
             	<li v-if="items" v-for="item in items">
@@ -56,8 +56,8 @@ export default {
         Activate page parent in the navigation menu
         if one of it's children is the current page.
         */
-        hasChildOfType (type) {
-            return type === this.$route.name
+        hasChildOfType (types) {
+            return types.includes(this.$route.name)
         }
     }
 }
@@ -65,38 +65,44 @@ export default {
 </script>
 
 <style>
-.main-nav ul ul {
-    display: none;
-    position: absolute;
-}
+    .main-nav {
+        background: #d8d8d8;
+    }
 
-.main-nav ul li:hover ul {
-    display: block;
-}
+    .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.main-nav {
-    background: #d8d8d8;
-}
+    .main-nav ul li {
+        display: inline-block;
+        position: relative;
+        background: #d8d8d8;
+    }
+     
+    .main-nav ul li a {
+        display: block;
+        padding: 20px;
+        color: #444444;
+        font-size: 17px;
+    }
 
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    .main-nav ul li a:hover, .main-nav ul li a:focus {
+        text-decoration: none;
+    }
 
-.main-nav ul li {
-    display: inline-block;
-    position: relative;
-    background: #d8d8d8;
-}
- 
-.main-nav ul li a {
-    display: block;
-    padding: 20px;
-    color: #444444;
-}
+    .main-nav ul ul {
+        display: none;
+        position: absolute;
+    }
 
-.main-nav .router-link-active {
-    background: #cacaca;
-}
+    .main-nav ul li:hover ul {
+        display: block;
+    }
+
+    .main-nav .router-link-active {
+        background: #ffffff;
+        color: black;
+    }
 </style>

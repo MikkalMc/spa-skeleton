@@ -1,3 +1,14 @@
 @import 'header';
 @import 'footer';
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/scss/_variables.scss';
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+body, h1, h2, h3, h4, h5, p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	max-width: 800px;
+}

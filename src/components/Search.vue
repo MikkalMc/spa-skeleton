@@ -97,21 +97,22 @@ export default {
 </script>
 
 <style>
-.search-toggle {
-    float: right;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 6px 10px;
-    background: #d8d8d8;
-    cursor: pointer;
-}
+    .search-toggle {
+        float: right;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 6px 10px;
+        background: #d8d8d8;
+        cursor: pointer;
+        display: none;
+    }
 
-.search-interface {
-    padding-right: 100px;
-}
+    .search-interface {
+        padding-right: 100px;
+    }
 
-.search-interface input {
-    width: calc(100% - 100px);
-}
+    .search-interface input {
+        width: calc(100% - 100px);
+    }
 </style>

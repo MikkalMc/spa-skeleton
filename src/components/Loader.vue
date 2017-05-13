@@ -1,6 +1,6 @@
 <template>
     <div v-if="isLoading" class="loader">
-        Loading..
+        <span>Loading..</span>
     </div>
 </template>
 
@@ -33,10 +33,20 @@ export default {
 <style>
     .loader {
         position: fixed;
-        top: 20px;
-        font-size: 16px;
+        top: 0;
+        left: 0;
         width: 100%;
-        text-align: center;
-        color: white;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .loader span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        color: black;
     }
 </style>

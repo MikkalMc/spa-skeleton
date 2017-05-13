@@ -48,6 +48,7 @@ const routes = [
 
 // The VueRouter with our defined routes.
 const router = new VueRouter({
+	mode: 'history',
 	routes
 })
 

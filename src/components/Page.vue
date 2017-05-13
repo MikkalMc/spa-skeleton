@@ -1,5 +1,5 @@
 <template>
-    <div v-if="fetchedPage" class="container">
+    <div v-if="fetchedPage" class="container page">
         <h1>{{ fetchedPage.title.rendered }}</h1>
         <div v-html="fetchedPage.content.rendered"></div>
     </div>
@@ -55,5 +55,7 @@ export default {
 </script>
 
 <style>
-
+    .page h1 {
+        margin-top: 0;
+    }
 </style>

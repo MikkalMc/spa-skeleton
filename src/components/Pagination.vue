@@ -26,7 +26,17 @@ export default {
 </script>
 
 <style>
-    .pagination .router-link-active {
-        background: #d8d8d8;
+    .pagination {
+        font-size: 17px;
+    }
+
+    .pagination a {
+        color: black !important;
+    }
+
+    .pagination .router-link-active, 
+    .pagination .router-link-active:hover {
+        background: #c71a1a;
+        color: white !important;
     }
 </style>

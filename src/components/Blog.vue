@@ -1,12 +1,13 @@
 <template>
-    <div class="container posts">
-        <div v-if="fetchedPosts">
-            <div v-for="post in fetchedPosts">
-                <post-excerpt :post="post"></post-excerpt>
-            </div>
-
-            <pagination :pageCount="this.pagination.pageCount" :route="this.pagination.route"></pagination>
+    <div v-if="fetchedPosts && fetchedPosts.length > 0" class="container posts">
+        <div v-for="post in fetchedPosts" class="post">
+            <post-excerpt :post="post"></post-excerpt>
         </div>
+
+        <pagination :pageCount="this.pagination.pageCount" :route="this.pagination.route"></pagination>
+    </div>
+    <div v-else class="container">
+        No posts found
     </div>
 </template>
 
@@ -70,5 +71,14 @@ export default {
 </script>
 
 <style>
+    .posts > .post {
+        padding-bottom: 60px;
+        border-bottom: 1px solid #d8d8d8;
+        margin-bottom: 60px;   
+    }
 
+    .posts > .post:last-of-type {
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
 </style>
