@@ -1,18 +1,19 @@
 <html>
 	<head>
 		<title>Wordpress SPA by n9nome</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 		<!-- @todo webpack -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- @todo better way to handle this outside of PHP? -->
+		<script src="<?php echo get_template_directory_uri(); ?>/config.js"></script>
 	</head>
 
 	<body>
-
 		<script>
 			window.config = {
 				baseUrl: '<?php bloginfo("wpurl"); ?>',
-				// @todo
-				mainMenuId: 2
+				mainMenuId: userSuppliedConfig.mainMenuId
 			}
 		</script>
 
