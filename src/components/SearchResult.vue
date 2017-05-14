@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link :to="{ name: getRoute, params: { slug: result.slug } }">{{ result.title.rendered }}</router-link>
+        <router-link :to="{ name: getRoute, params: { slug: result.slug } }">{{ result.title.rendered }} <span>{{ this.fromNow(result.date) }}</span></router-link>
     </div>
 </template>
 
@@ -25,9 +25,3 @@ export default {
 }
 
 </script>
-
-<style>
-    h2 {
-        
-    }
-</style>
