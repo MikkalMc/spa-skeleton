@@ -14196,9 +14196,9 @@
 	All post-related endpoints.
 	*/
 	exports.default = {
-		POSTS: 'http://wordpress.app/wp-json/wp/v2/posts?page=',
-		POST_BY_ID: 'http://wordpress.app/wp-json/wp/v2/posts/',
-		POST_BY_SLUG: 'http://wordpress.app/wp-json/wp/v2/posts?slug='
+		POSTS: window.config.baseUrl + '/wp-json/wp/v2/posts?page=',
+		POST_BY_ID: window.config.baseUrl + '/wp-json/wp/v2/posts/',
+		POST_BY_SLUG: window.config.baseUrl + '/wp-json/wp/v2/posts?slug='
 	};
 
 /***/ },
@@ -14693,9 +14693,9 @@
 	All page-related endpoints.
 	*/
 	exports.default = {
-		ALL_PAGES: 'http://wordpress.app/wp-json/wp/v2/pages',
-		PAGE_BY_ID: 'http://wordpress.app/wp-json/wp/v2/pages/',
-		PAGE_BY_SLUG: 'http://wordpress.app/wp-json/wp/v2/pages?slug='
+		ALL_PAGES: window.config.baseUrl + '/wp-json/wp/v2/pages',
+		PAGE_BY_ID: window.config.baseUrl + '/wp-json/wp/v2/pages/',
+		PAGE_BY_SLUG: window.config.baseUrl + '/wp-json/wp/v2/pages?slug='
 	};
 
 /***/ },
@@ -15040,7 +15040,7 @@
 	@todo make this configurable.
 	*/
 	exports.default = {
-		MAIN_MENU: 'http://wordpress.app/wp-json/wp-api-menus/v2/menus/2'
+		MAIN_MENU: window.config.baseUrl + '/wp-json/wp-api-menus/v2/menus/' + window.config.mainMenuId
 	};
 
 /***/ },
@@ -15381,8 +15381,8 @@
 	All search-related endpoints.
 	*/
 	exports.default = {
-		PAGES: 'http://wordpress.app/wp-json/wp/v2/pages?search=',
-		POSTS: 'http://wordpress.app/wp-json/wp/v2/posts?search='
+		PAGES: window.config.baseUrl + '/wp-json/wp/v2/pages?search=',
+		POSTS: window.config.baseUrl + '/wp-json/wp/v2/posts?search='
 	};
 
 /***/ },

@@ -7,6 +7,15 @@
 	</head>
 
 	<body>
+
+		<script>
+			window.config = {
+				baseUrl: '<?php bloginfo("wpurl"); ?>',
+				// @todo
+				mainMenuId: 2
+			}
+		</script>
+
 		<div id="app">
 			<header>
 				<div class="banner">
