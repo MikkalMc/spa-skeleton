@@ -1,9 +1,9 @@
 <template>
-    <div v-if="fetchedPost" class="container">
-        <router-link :to="{ name: 'blog', params: { 'page': 1 } }">Back to blog</router-link>
+    <div v-if="fetchedPost" class="container single-post">
+        <router-link :to="{ name: 'blog', params: { 'page': 1 } }" class="back-to-blog"><i class="fa fa-caret-left"></i> Back to blog</router-link>
 
         <h1>{{ fetchedPost.title.rendered }}</h1>
-        <p>{{ this.fromNow(fetchedPost.date) }}</p>
+        <p class="post-meta">Posted {{ this.fromNow(fetchedPost.date) }} by <a href="">Scott Wood</a></p>
         <div v-html="fetchedPost.content.rendered"></div>
     </div>
 </template>
@@ -61,5 +61,23 @@ export default {
 </script>
 
 <style>
+    .single-post p {
+        font-size: 18px;
+        line-height: 28px;
+    }
 
+    .back-to-blog {
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #c71a1a;
+    }
+
+    .back-to-blog:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    .post-meta {
+        color: grey;
+    }
 </style>

@@ -14259,7 +14259,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\t.read-more {\n    \tbackground: #c71a1a;\n\t    padding: 10px 18px;\n\t    display: inline-block;\n\t    color: white;\n\t    font-size: 16px;\n\t}\n\n\t.tagged, .author {\n\t\tmargin-left: 28px;\n\t}\n\n\t.tagged .fa, .author .fa {\n\t\tmargin-right: 8px;\n    \tcolor: #c71a1a;\n\t}\n\n\t.excerpt h2 {\n\t\tfont-weight: 500;\n\t\tfont-size: 34px;\n\t\tmargin-top: 0;\n\t}\n\n\t.excerpt h2 span {\n\t\tfloat: right;\n\t\tcolor: grey;\n\t\tfont-size: 14px;\n\t\tfont-weight: normal;\n\t}\n\n\t.excerpt .content {\n\t\tfont-size: 18px;\n\t\tline-height: 30px;\n\t\tmargin: 14px 0 30px 0;\n\t}\n", ""]);
+	exports.push([module.id, "\n\t.read-more {\n    \tbackground: #c71a1a;\n\t    padding: 10px 18px;\n\t    display: inline-block;\n\t    color: white;\n\t    font-size: 16px;\n\t}\n\n\t.read-more:hover {\n\t\tcolor: white;\n\t\tbackground: #d82626;\n\t\ttext-decoration: none;\n\t}\n\n\t.tagged, .author {\n\t\tmargin-left: 28px;\n\t}\n\n\t.tagged .fa, .author .fa {\n\t\tmargin-right: 8px;\n    \tcolor: #c71a1a;\n\t}\n\n\t.excerpt h2 {\n\t\tfont-weight: 500;\n\t\tfont-size: 34px;\n\t\tmargin-top: 0;\n\t}\n\n\t.excerpt h2 span {\n\t\tfloat: right;\n\t\tcolor: grey;\n\t\tfont-size: 14px;\n\t\tfont-weight: normal;\n\t}\n\n\t.excerpt .content {\n\t\tfont-size: 18px;\n\t\tline-height: 30px;\n\t\tmargin: 14px 0 30px 0;\n\t}\n", ""]);
 
 	// exports
 
@@ -14295,6 +14295,12 @@
 	// 	    display: inline-block;
 	// 	    color: white;
 	// 	    font-size: 16px;
+	// 	}
+	//
+	// 	.read-more:hover {
+	// 		color: white;
+	// 		background: #d82626;
+	// 		text-decoration: none;
 	// 	}
 	//
 	// 	.tagged, .author {
@@ -14436,7 +14442,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n", ""]);
+	exports.push([module.id, "\n    .single-post p {\n        font-size: 18px;\n        line-height: 28px;\n    }\n\n    .back-to-blog {\n        text-transform: uppercase;\n        font-size: 10px;\n        color: #c71a1a;\n    }\n\n    .back-to-blog:hover {\n        text-decoration: none;\n        color: black;\n    }\n\n    .post-meta {\n        color: grey;\n    }\n", ""]);
 
 	// exports
 
@@ -14462,11 +14468,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// <template>
-	//     <div v-if="fetchedPost" class="container">
-	//         <router-link :to="{ name: 'blog', params: { 'page': 1 } }">Back to blog</router-link>
+	//     <div v-if="fetchedPost" class="container single-post">
+	//         <router-link :to="{ name: 'blog', params: { 'page': 1 } }" class="back-to-blog"><i class="fa fa-caret-left"></i> Back to blog</router-link>
 	//
 	//         <h1>{{ fetchedPost.title.rendered }}</h1>
-	//         <p>{{ this.fromNow(fetchedPost.date) }}</p>
+	//         <p class="post-meta">Posted {{ this.fromNow(fetchedPost.date) }} by <a href="">Scott Wood</a></p>
 	//         <div v-html="fetchedPost.content.rendered"></div>
 	//     </div>
 	// </template>
@@ -14527,14 +14533,32 @@
 	// </script>
 	//
 	// <style>
+	//     .single-post p {
+	//         font-size: 18px;
+	//         line-height: 28px;
+	//     }
 	//
+	//     .back-to-blog {
+	//         text-transform: uppercase;
+	//         font-size: 10px;
+	//         color: #c71a1a;
+	//     }
+	//
+	//     .back-to-blog:hover {
+	//         text-decoration: none;
+	//         color: black;
+	//     }
+	//
+	//     .post-meta {
+	//         color: grey;
+	//     }
 	// </style>
 
 /***/ },
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div v-if=\"fetchedPost\" class=\"container\">\n        <router-link :to=\"{ name: 'blog', params: { 'page': 1 } }\">Back to blog</router-link>\n\n        <h1>{{ fetchedPost.title.rendered }}</h1>\n        <p>{{ this.fromNow(fetchedPost.date) }}</p>\n        <div v-html=\"fetchedPost.content.rendered\"></div>\n    </div>\n";
+	module.exports = "\n    <div v-if=\"fetchedPost\" class=\"container single-post\">\n        <router-link :to=\"{ name: 'blog', params: { 'page': 1 } }\" class=\"back-to-blog\"><i class=\"fa fa-caret-left\"></i> Back to blog</router-link>\n\n        <h1>{{ fetchedPost.title.rendered }}</h1>\n        <p class=\"post-meta\">Posted {{ this.fromNow(fetchedPost.date) }} by <a href=\"\">Scott Wood</a></p>\n        <div v-html=\"fetchedPost.content.rendered\"></div>\n    </div>\n";
 
 /***/ },
 /* 30 */

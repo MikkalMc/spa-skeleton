@@ -32,6 +32,12 @@ export default {
 	    font-size: 16px;
 	}
 
+	.read-more:hover {
+		color: white;
+		background: #d82626;
+		text-decoration: none;
+	}
+
 	.tagged, .author {
 		margin-left: 28px;
 	}
